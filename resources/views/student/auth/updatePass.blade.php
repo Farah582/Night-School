@@ -46,7 +46,7 @@
                             </div>
                             <div class="form-group">
                                 <input type="submit" name="submit" class="btn btn-info btn-md" value="submit">
-                                <a href="{{ url('student/forgot-password') }}">Forgot Password?</a>
+                                <a href="{{ url('student/forgot-password') }}"><b>Forgot Password?</b></a>
                             </div>
                             <div id="register-link" class="text-right">
                                 <a href="{{ url('student/register') }}" class="text-info">Register here</a>

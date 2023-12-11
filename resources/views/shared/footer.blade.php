@@ -1,20 +1,22 @@
 <style>
-    .bottom-div {
+    body {
+        margin-bottom: 60px; /* Adjust the margin to accommodate the fixed footer */
+    }
+
+    footer {
         position: fixed;
         left: 0;
         bottom: 0;
         width: 100%;
-        background-color: #f1f1f1;
-        /* padding: 20px; */
-        text-align: center;
+        padding: 10px;
+        background-color: #343a40; /* Dark background color */
+        color: #ffffff; /* Text color */
     }
 </style>
 
-<div class="bottom-div">
+<footer>
+    <div class="container text-center">
+        <small>&copy; 2023 Night School</small>
+    </div>
+</footer>
 
-    <footer id="sticky-footer" class="flex-shrink-0 py-4 bg-dark text-white-50">
-        <div class="container text-center">
-            <small>Copyright &copy; Night School</small>
-        </div>
-    </footer>
-</div>

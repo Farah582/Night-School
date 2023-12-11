@@ -25,7 +25,7 @@
                     <div id="login-box" class="col-md-12">
                         <form id="login-form" class="form" action="{{ url('/student/resetCheck/') }}" method="post">
                             @csrf
-                            <h3 class="text-center text-info">Reset your password</h3>
+                            <h3 class="text-center text-info"><b>Reset your password</b></h3>
                             <h4 class="text-center text-info">Enter your mail & full-name</h4>
                             <div class="form-group">
                                 <label for="email" class="text-info">Email:</label><br>

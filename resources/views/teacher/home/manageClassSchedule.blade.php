@@ -31,8 +31,28 @@
                 <tr>
                     <td>{{ $map_schedules[$c->course_id] }}</td>
                     <td>{{ $c->day_of_week }}</td>
-                    <td>{{ $c->start_time }}</td>
-                    <td>{{ $c->end_time }}</td>
+
+                    @if(explode(":", $c->start_time)[0] >= 12)
+                    <td>
+                        {{$c->start_time}} PM
+                    </td>
+                    @else
+                    <td>
+                        {{$c->start_time}} AM
+                    </td>
+                    @endif
+                    <!-- <td>{{ $c->start_time }}</td> -->
+                    <!-- <td>{{ $c->end_time }}</td> -->
+
+                    @if(explode(":", $c->end_time)[0] >= 12)
+                    <td>
+                        {{$c->end_time}} PM
+                    </td>
+                    @else
+                    <td>
+                        {{$c->end_time}} AM
+                    </td>
+                    @endif
                     <td>
                         <a href="{{ url('teacher/edit-routine/'.$c->id) }}" class="btn btn-secondary">Update Routine</a>
                         <a href="{{ url('teacher/delete-routine/'.$c->id) }}" class="btn btn-danger" data-toggle="modal" data-target="#myModal{{$c->id}}">Delete Routine</a>

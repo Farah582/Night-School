@@ -23,14 +23,34 @@
             <thead>
                 <tr>
                     <th>{{ $key }}</th>
+                    <th>Start</th>
+                    <th>End</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach($value as $v)
                 <tr>
                     <td>{{$v['courseName']}}</td>
-                    <td>{{$v['startTime']}}</td>
-                    <td>{{$v['endTime']}}</td>
+
+                    @if(explode(":", $v['startTime'])[0] >= 12)
+                    <td>
+                        {{$v['startTime']}} PM
+                    </td>
+                    @else
+                    <td>
+                        {{$v['startTime']}} AM
+                    </td>
+                    @endif
+
+                    @if(explode(":", $v['endTime'])[0] >= 12)
+                    <td>
+                        {{$v['endTime']}} PM
+                    </td>
+                    @else
+                    <td>
+                        {{$v['endTime']}} AM
+                    </td>
+                    @endif
                 </tr>
                 @endforeach
             </tbody>

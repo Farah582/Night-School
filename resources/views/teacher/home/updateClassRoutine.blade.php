@@ -25,11 +25,11 @@
             </div>
             <div class="form-group">
                 <label for="start_time" class="text-info">Start Time:</label><br>
-                <input type="text" name="start_time" value="{{ $course->start_time }}" id="start_time" class="form-control">
+                <input type="time" name="start_time" value="{{ $course->start_time }}" id="start_time" class="form-control">
             </div>
             <div class="form-group">
                 <label for="end_time" class="text-info">End Time:</label><br>
-                <input type="text" name="end_time" value="{{ $course->end_time }}" id="end_time" class="form-control">
+                <input type="time" name="end_time" value="{{ $course->end_time }}" id="end_time" class="form-control">
             </div>
             <div class="form-group">
                 <input type="submit" name="submit" class="btn btn-info btn-md" value="Update">

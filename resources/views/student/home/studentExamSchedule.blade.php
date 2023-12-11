@@ -33,8 +33,26 @@
                     <td>{{ $r['course_name'] }}</td>
                     <td>{{ $r['exam_type'] }}</td>
                     <td>{{ $r['date'] }}</td>
-                    <td>{{ $r['start_time'] }}</td>
-                    <td>{{ $r['end_time'] }}</td>
+
+                    @if(explode(":", $r['start_time'])[0] >= 12)
+                    <td>
+                        {{$r['start_time']}} PM
+                    </td>
+                    @else
+                    <td>
+                        {{$r['start_time']}} AM
+                    </td>
+                    @endif
+
+                    @if(explode(":", $r['end_time'])[0] >= 12)
+                    <td>
+                        {{$r['end_time']}} PM
+                    </td>
+                    @else
+                    <td>
+                        {{$r['end_time']}} AM
+                    </td>
+                    @endif
                 </tr>
                 @endforeach
             </tbody>
