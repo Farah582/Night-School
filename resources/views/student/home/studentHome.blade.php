@@ -23,7 +23,7 @@
             </div>
             <div class="col-sm-4">
                 <h3><a href="{{ url('student/exam-schedule') }}">Exam Schedule</a></h3>
-                <p>Manage attendance</p>
+                <p>Manage exam schedule</p>
             </div>
             <div class="col-sm-4">
                 <h3><a href="{{ url('student/class-schedule') }}">Class Routine</a></h3>
